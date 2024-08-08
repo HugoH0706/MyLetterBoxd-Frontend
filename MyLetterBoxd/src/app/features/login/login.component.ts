@@ -14,19 +14,13 @@ import { AuthService } from '../../auth/auth.service';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  username!: string;
-  password!: string;
   authService = inject(AuthService);
   router = inject(Router);
   
   protected loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
+    username: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   })
-
-  constructor() {
-    
-  }
 
   onSubmit(){
     if(this.loginForm.valid){
@@ -34,7 +28,7 @@ export class LoginComponent {
       this.authService.login(this.loginForm.value)
       .subscribe((data: any) => {
         if(this.authService.isLoggedIn()){
-          this.router.navigate(['/admin']);
+          this.router.navigate(['/']);
         }
         console.log(data);
       });
