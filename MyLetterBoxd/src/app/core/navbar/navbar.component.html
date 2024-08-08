@@ -1,0 +1,17 @@
+<div class="full-navbar">
+    <div id="logo-parent">
+        <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <img src="../../assets/letterboxd.png" alt="Logo"/>
+        </a>
+    </div>
+    <div class="navbar-parent">
+        <a routerLink="/movies" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-item">Movies</a>
+    </div>
+    <!-- VVV Make sure this div is always the last VVV-->
+    <!-- <div *ngIf="authService.loggedIn" class="navbar-parent">
+        <a (click)="logout()" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-item">Log out</a>
+    </div> -->
+    <div class="navbar-parent">
+        <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-item">Log in</a>
+    </div>
+</div>
