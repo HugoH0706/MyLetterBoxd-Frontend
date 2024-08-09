@@ -1,0 +1,48 @@
+.film-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    color: white; 
+    font-family: Arial, sans-serif;
+    padding: 20px; 
+    max-width: 800px;
+    background-color: transparent;
+    margin: auto; 
+}
+
+.film-details h1, .film-details p {
+    margin: 0;
+}
+
+.film-details h1 {
+    font-size: 3rem;
+    margin-bottom: 20px; 
+}
+
+.film-details p {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+/* General styling for the Back button */
+.back-button {
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Rounds the corners of the button */
+    padding: 10px 20px; /* Adds padding inside the button */
+    font-size: 1rem; /* Sets the font size */
+    cursor: pointer; /* Shows a pointer cursor on hover */
+    margin-bottom: 20px; /* Adds space below the button */
+    transition: background-color 0.3s; /* Smooth transition effect on hover */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back-button:focus {
+    outline: none; /* Removes the default focus outline */
+}

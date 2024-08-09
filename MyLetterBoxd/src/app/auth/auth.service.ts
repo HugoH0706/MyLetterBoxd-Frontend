@@ -8,16 +8,18 @@ import { tap } from 'rxjs/operators';
 })
 export class AuthService {
   httpClient = inject(HttpClient);
+  loggedIn!: boolean;
   baseUrl = 'http://localhost:5152/api';
 
   constructor() { }
 
 
   signup(data: any) {
-    return this.httpClient.post(`${this.baseUrl}/user/register`, data);
+    return this.httpClient.post(`${this.baseUrl}/user/register`, data, {responseType: 'text'});
   }
 
   login(data: any) {
+    this.loggedIn = true;
     return this.httpClient.post(`${this.baseUrl}/user/login`, data)
       .pipe(tap((result) => {
         localStorage.setItem('authUser', JSON.stringify(result));
@@ -25,10 +27,11 @@ export class AuthService {
   }
 
   logout() {
+    this.loggedIn = false;
     localStorage.removeItem('authUser');
   }
 
   isLoggedIn() {
-    return localStorage.getItem('authUser') !== null;
+    return this.loggedIn;
   }
 }

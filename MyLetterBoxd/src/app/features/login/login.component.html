@@ -4,8 +4,8 @@
         <span>You don't have an account? <a routerLink="/signup">Sign up</a></span>
     </div>
     <form class="form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <input name="email" type="email" formControlName="email" placeholder="Email">
-        <input type="password" formControlName="password" placeholder="Password">
+        <input name="username" type="text" formControlName="username" placeholder="Username">
+        <input name="password" type="password" formControlName="password" placeholder="Password">
         <button>Submit</button>
     </form>
 

@@ -49,14 +49,3 @@
     padding: 8px 15px;
     width: 100%;
 }
-
-.card-terms {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-}
-
-.card-terms span {
-    margin: 5px;
-    font-size: 13px;
-}
