@@ -1,3 +1,4 @@
 # MyLetterBoxd-Frontend
 
-https://www.techiediaries.com/login-signup-api-angular-17/
+# Login & signup page
+With help of: https://www.techiediaries.com/login-signup-api-angular-17/

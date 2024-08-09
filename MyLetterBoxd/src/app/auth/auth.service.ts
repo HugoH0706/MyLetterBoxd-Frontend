@@ -15,7 +15,7 @@ export class AuthService {
 
 
   signup(data: any) {
-    return this.httpClient.post(`${this.baseUrl}/user/register`, data);
+    return this.httpClient.post(`${this.baseUrl}/user/register`, data, {responseType: 'text'});
   }
 
   login(data: any) {
@@ -27,7 +27,7 @@ export class AuthService {
   }
 
   logout() {
-    this.loggedIn = true;
+    this.loggedIn = false;
     localStorage.removeItem('authUser');
   }
 

@@ -7,7 +7,7 @@ img {
 .navbar-item {
     text-decoration: none;
     color:white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 0.5rem 1rem;
     display: inline-block;
     transition: background-color 0.3s ease;
@@ -15,21 +15,12 @@ img {
 
 .navbar-item:hover,
 .navbar-item.active {
-    background-color: #004080;
+    /* background-color: #004080; */
     border-radius: 5px;
 }
 
 .navbar-parent {
     margin: 0 1rem;
-}
-
-.navbar-parent:last-child .navbar-item {
-    background-color: #ff6347;
-    color: white;
-}
-
-.navbar-parent:last-child .navbar-item:hover {
-    background-color: #ff4500;
 }
 
 #logo-parent {
@@ -42,6 +33,6 @@ img {
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    background-color: #002f6c;
+    /* background-color: #002f6c; */
     color: white;
 }

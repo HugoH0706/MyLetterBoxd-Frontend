@@ -2,7 +2,6 @@
     padding: 2rem 1rem;
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.6);
     color: #fff;
     border-radius: 10px;
     margin-bottom: 2rem;
@@ -18,14 +17,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     gap: 2rem;
+    justify-content: center;
 }
 
 .feature {
-    background: #2c3e50;
+    background: rgba(0, 0, 0, 0.7);
     color: #ecf0f1; 
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease;
     text-align: center;
 }
@@ -41,5 +41,5 @@
 }
 
 .feature:hover {
-    background: #34495e;
+    background: rgba(0, 0, 0, 0.9);
 }

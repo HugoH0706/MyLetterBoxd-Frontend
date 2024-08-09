@@ -16,22 +16,26 @@ export class SignupComponent {
   router  =  inject(Router);
   
   public signupForm = new FormGroup({
-    name: new FormControl('', [Validators.required]),
     username: new FormControl('', [Validators.required]),
+    firstName: new FormControl('', [Validators.required]),
+    lastName: new FormControl('', [Validators.required]),
     password: new FormControl('', [Validators.required])
   })
 
   public onSubmit() {
     if (this.signupForm.valid) {
-      console.log(this.signupForm.value);
       this.authService.signup(this.signupForm.value)
         .subscribe({
           next: (data: any) => {
             console.log(data);
+            this.signupForm.reset();
             this.router.navigate(['/login']);
+
           },
           error: (err) => console.log(err)
         });
+    } else {
+      console.log("invalid form");
     }
   }
 
