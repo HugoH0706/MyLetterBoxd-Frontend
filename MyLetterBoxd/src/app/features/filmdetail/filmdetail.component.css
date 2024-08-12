@@ -40,9 +40,30 @@
 }
 
 .back-button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3; 
 }
 
 .back-button:focus {
-    outline: none; /* Removes the default focus outline */
+    outline: none;
 }
+
+.cast-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cast-table th, .cast-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.cast-table th {
+    text-align: left;
+}
+
+.cast-table td {
+    font-size: 20px;
+}
+

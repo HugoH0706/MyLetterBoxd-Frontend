@@ -3,7 +3,33 @@
     <p>Description: {{ film.description }}</p>
     <p>Release Date: {{ film.releaseDate }}</p>
     <p>Rating: {{ film.rating }}</p>
-    <button class="back-button" routerLink="/films">Back</button>
-  </div>
+    <p> Genre: 
+      <ng-container *ngFor="let genre of genres; let last = last">
+          {{ genre }}<ng-container *ngIf="!last">, </ng-container>
+      </ng-container>
+    </p>
+  
+
+    <table class="cast-table">
+      <thead>
+          <tr>
+              <th>Role</th>
+              <th>Name</th>
+              <th>Character</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let member of cast; let last = last">
+              <td *ngIf="last">Director</td>
+              <td *ngIf="!last">Actor</td>
+              <td>{{ member.name }}</td>
+              <td>{{ member.character }}</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <button class="back-button" routerLink="/films">Back</button>
+  <button (click)="addToWatchlist()" *ngIf="isLoggedIn" class="back-button"> Add to watchlist</button>
+</div>
  
   
