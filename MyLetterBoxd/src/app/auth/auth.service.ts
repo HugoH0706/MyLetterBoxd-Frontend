@@ -12,16 +12,15 @@ export class AuthService {
   baseUrl = 'http://localhost:5152/api';
 
   constructor() { }
-
-
+  
   signup(data: any) {
     return this.httpClient.post(`${this.baseUrl}/user/register`, data, {responseType: 'text'});
   }
 
   login(data: any) {
-    this.loggedIn = true;
     return this.httpClient.post(`${this.baseUrl}/user/login`, data)
       .pipe(tap((result) => {
+        this.loggedIn = true;
         localStorage.setItem('authUser', JSON.stringify(result));
       }));
   }

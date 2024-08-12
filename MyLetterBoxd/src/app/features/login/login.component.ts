@@ -30,7 +30,6 @@ export class LoginComponent {
         if(this.authService.isLoggedIn()){
           this.router.navigate(['/']);
         }
-        console.log(data);
       });
     }
   }
