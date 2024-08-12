@@ -8,7 +8,7 @@
         <a routerLink="/entertainment" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-item">Entertainment</a>
     </div>
     <div *ngIf="authService.loggedIn" class="navbar-parent">
-        <a routerLink="/myreservations" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-item">Saved Entertainment</a>
+        <a routerLink="/savedentertainment" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-item">Saved Entertainment</a>
     </div>
     <div *ngIf="authService.loggedIn" class="navbar-parent">
         <a routerLink="/mybooks" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-item">My Entertainment</a>

@@ -7,6 +7,7 @@ import { HomepageComponent } from './features/homepage/homepage.component';
 import { EntertainmentComponent } from './features/entertainment/entertainment.component';
 import { FilmComponent } from './features/film/film.component';
 import { FilmdetailComponent } from './features/filmdetail/filmdetail.component';
+import { SavedentertainmentComponent } from './features/savedentertainment/savedentertainment.component';
 
 export const routes: Routes = [
     // {path: '', redirectTo: '/login', pathMatch: 'full'},
@@ -16,5 +17,7 @@ export const routes: Routes = [
     {path: 'admin', component: AdminComponent, canActivate: [authGuard]},
     {path: 'entertainment', component: EntertainmentComponent},
     {path: 'films', component: FilmComponent},
-    {path: 'films/:id', component: FilmdetailComponent}
+    {path: 'films/:id', component: FilmdetailComponent},
+    {path: 'savedentertainment', component: SavedentertainmentComponent},
+    
 ];

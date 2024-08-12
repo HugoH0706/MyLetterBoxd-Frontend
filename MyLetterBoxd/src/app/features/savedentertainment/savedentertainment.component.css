@@ -1,0 +1,49 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0; 
+    font-family: Arial, sans-serif; 
+    color: white; 
+}
+
+.table th, .table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table tr:hover {
+    background-color: #555;
+}
+
+.table caption {
+    caption-side: bottom;
+    font-style: italic;
+    padding: 10px;
+}
+
+h1, h2, h3 {
+    max-width: 800px;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.delete-button {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-button:hover {
+    background-color: #ff1c1c;
+}
